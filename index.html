@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portfolio of Stanley Dirk Nente, Computer Science student at BINUS University working on machine learning, computer vision and web projects.">
+<meta property="og:title" content="Stanley Dirk Nente – Portfolio">
+<meta property="og:description" content="Machine learning, computer vision and web projects. Published at IEEE ICISS 2026.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%BB%3C/text%3E%3C/svg%3E">
+<title>Stanley Dirk Nente – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4F8;--surface:#FFFFFF;--ink:#13203B;--muted:#55627D;--line:#D3DAE6;--accent:#2A4FD6;--accent-ink:#FFFFFF;--hi:#E4EBFF;
+  --display:'Bricolage Grotesque','Segoe UI',Arial,sans-serif;--body:'Instrument Sans','Segoe UI',Arial,sans-serif;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#0F1524;--surface:#172036;--ink:#E8ECF6;--muted:#9AA7C4;--line:#2A3552;--accent:#7C9BFF;--accent-ink:#0F1524;--hi:#22305A}
+}
+:root[data-theme="dark"]{--bg:#0F1524;--surface:#172036;--ink:#E8ECF6;--muted:#9AA7C4;--line:#2A3552;--accent:#7C9BFF;--accent-ink:#0F1524;--hi:#22305A}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body)}
+a{color:var(--accent)}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px;gap:16px}
+header strong{font-family:var(--display);font-size:18px;white-space:nowrap}
+nav{display:flex;gap:20px;font-size:15px;overflow-x:auto}
+nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
+nav a:hover{color:var(--ink)}
+.hero{padding:72px 0 48px}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(44px,9vw,84px);line-height:.98;letter-spacing:-.03em;margin:0 0 20px}
+.hero .role{font-family:var(--display);font-size:clamp(20px,3.4vw,26px);color:var(--muted);margin:0 0 20px}
+.hero p{max-width:62ch;font-size:19px;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:1.5px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+section{padding:40px 0;border-top:1px solid var(--line)}
+h2{font-family:var(--display);font-size:30px;letter-spacing:-.01em;margin:0 0 20px}
+.lead{color:var(--muted);margin:-8px 0 24px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;margin-bottom:12px}
+summary{cursor:pointer;list-style:none;padding:18px 20px;display:grid;grid-template-columns:1fr auto;gap:4px 16px;align-items:start}
+summary::-webkit-details-marker{display:none}
+summary .t{font-family:var(--display);font-weight:700;font-size:21px}
+summary .s{grid-column:1;color:var(--muted);font-size:15.5px}
+summary .chev{grid-row:1;grid-column:2;color:var(--accent);font-size:22px;line-height:1;transition:transform .2s}
+details[open] .chev{transform:rotate(45deg)}
+.tags{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tags span{font-size:13.5px;border:1px solid var(--line);border-radius:99px;padding:1px 10px;color:var(--muted)}
+.tags span.pub{background:var(--hi);color:var(--ink);border-color:transparent}
+.body{padding:4px 20px 20px;border-top:1px solid var(--line)}
+.body h3{font-size:16px;margin:18px 0 4px;font-family:var(--display)}
+.body p,.body li{max-width:66ch}
+.body p{margin:0}
+.body ul{margin:0;padding-left:20px}
+.body .links{margin-top:18px;display:flex;gap:18px;flex-wrap:wrap;font-weight:600}
+.tbl{overflow-x:auto;margin-top:8px;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px;font-variant-numeric:tabular-nums}
+caption{text-align:left;font-weight:600;padding:8px 10px;font-size:14.5px}
+th,td{padding:7px 10px;text-align:right;border-top:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--muted);font-weight:600}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:8px;align-items:start}
+.shots figure{margin:0}
+.shots img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:8px;background:#fff}
+.shots figcaption{font-size:14px;color:var(--muted);margin-top:6px}
+.pub-box{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:20px}
+.pub-box p{margin:0 0 10px;max-width:66ch}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 28px;margin:0}
+dt{font-weight:600}
+dd{margin:0;color:var(--muted)}
+.edu strong{font-family:var(--display);font-size:19px}
+.edu p{margin:2px 0 10px;color:var(--muted)}
+footer{padding:32px 0 48px;border-top:1px solid var(--line);color:var(--muted);font-size:15px}
+@media (max-width:560px){.hero{padding-top:44px}dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:10px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.chev{transition:none}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <strong>Stanley Dirk Nente</strong>
+    <nav aria-label="Sections">
+      <a href="#projects">Projects</a><a href="#publication">Publication</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap hero">
+  <h1>Stanley Dirk Nente</h1>
+  <p class="role">Computer Science student, AI and machine learning</p>
+  <p>I study at BINUS University and work on machine learning, computer vision and web projects. My paper on malaria detection from blood smear images was published at IEEE ICISS 2026. I'm looking for an internship where I can apply my AI and software skills to real projects.</p>
+  <div class="btns">
+    <a class="btn primary" href="#projects">See my projects</a>
+    <a class="btn ghost" href="https://github.com/Stanley3322">GitHub</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/stanley-nente-5022bb326">LinkedIn</a>
+  </div>
+</div>
+
+<div class="wrap">
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="lead">Select a project to read how I built it.</p>
+
+  <details open>
+    <summary>
+      <span class="t">Malaria detection from thin blood smear images</span><span class="chev" aria-hidden="true">+</span>
+      <span class="s">A benchmark of general-purpose multimodal models against domain-specific models, 2026.</span>
+      <span class="tags"><span class="pub">Published at ICISS 2026</span><span>PyTorch</span><span>EfficientNet-B3</span><span>SPCNN</span></span>
+    </summary>
+    <div class="body">
+      <h3>Question</h3>
+      <p>Do models built for one medical task beat general multimodal models at spotting malaria in thin blood smear images, and do they still work on data they haven't seen?</p>
+      <h3>What I did</h3>
+      <p>I built one of the two domain-specific models, then trained and tested both on in-distribution and out-of-distribution data. We compared them with multimodal generalized models.</p>
+      <h3>Findings</h3>
+      <ul>
+        <li>On in-distribution data, the domain-specific models did better than the generalized models, as expected.</li>
+        <li>Out of distribution, their metrics dropped much more than the generalized models' did.</li>
+        <li>Averaged across all metrics, a generalized model did better than the domain-specific models.</li>
+      </ul>
+      <h3>Domain-specific model results</h3>
+      <div class="tbl"><table>
+        <caption>In-distribution</caption>
+        <thead><tr><th>Model</th><th>Acc</th><th>Prec</th><th>Rec</th><th>F1</th><th>Macro F1</th><th>Bal. Acc</th><th>AUROC</th><th>ECE</th><th>Brier</th></tr></thead>
+        <tbody>
+          <tr><td>EfficientNet-B3</td><td>0.9744</td><td>0.9798</td><td>0.9688</td><td>0.9743</td><td>0.9744</td><td>0.9744</td><td>0.9953</td><td>0.0256</td><td>0.0219</td></tr>
+          <tr><td>SPCNN</td><td>0.9623</td><td>0.9733</td><td>0.9507</td><td>0.9618</td><td>0.9623</td><td>0.9623</td><td>0.9928</td><td>0.0226</td><td>0.0297</td></tr>
+        </tbody>
+      </table></div>
+      <div class="tbl" style="margin-top:12px"><table>
+        <caption>Out-of-distribution</caption>
+        <thead><tr><th>Model</th><th>Acc</th><th>Prec</th><th>Rec</th><th>F1</th><th>Macro F1</th><th>Bal. Acc</th><th>AUROC</th><th>ECE</th><th>Brier</th></tr></thead>
+        <tbody>
+          <tr><td>EfficientNet-B3</td><td>0.6184</td><td>0.8456</td><td>0.6382</td><td>0.7274</td><td>0.5460</td><td>0.5894</td><td>0.6294</td><td>0.0737</td><td>0.2276</td></tr>
+          <tr><td>SPCNN</td><td>0.7436</td><td>0.7883</td><td>0.9276</td><td>0.8523</td><td>0.4404</td><td>0.4731</td><td>0.2827</td><td>0.1843</td><td>0.2261</td></tr>
+        </tbody>
+      </table></div>
+      <div class="links"><a href="https://doi.org/10.1109/ICISS71466.2026.11715041">Read the paper</a><a href="https://github.com/Stanley3322?tab=repositories">GitHub</a></div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="t">Leafguard</span><span class="chev" aria-hidden="true">+</span>
+      <span class="s">A web app that diagnoses plant diseases from a photo using an AI agent, 2025.</span>
+      <span class="tags"><span>HTML</span><span>n8n</span><span>AI agent</span></span>
+    </summary>
+    <div class="body">
+      <h3>What it does</h3>
+      <p>A user uploads a photo of a plant and the website shows the AI agent's diagnosis of the disease right away. The interface is in Indonesian.</p>
+      <h3>What I did</h3>
+      <p>I developed the AI agent in n8n and connected it to the website.</p>
+      <h3>Screen</h3>
+      <div class="shots" style="grid-template-columns:1fr">
+        <figure><img alt="Leafguard home page with the title Plant Disease Diagnosis and an area to click and upload a plant photo" src="assets/leafguard-upload.jpg"><figcaption>Upload page: select a plant photo to get the AI result</figcaption></figure>
+      </div>
+      <h3>Status</h3>
+      <p>The live demo is offline. The AI agent ran on a free trial of n8n that has ended, so the site can no longer return diagnoses. The screenshot above shows the interface, and I can walk through how it worked.</p>
+      <div class="links"><a href="https://github.com/Stanley3322?tab=repositories">GitHub</a></div>
+    </div>
+  </details>
+
+  <details>
+    <summary>
+      <span class="t">QCare</span><span class="chev" aria-hidden="true">+</span>
+      <span class="s">An automated patient queuing system for clinics, 2026.</span>
+      <span class="tags"><span>JavaScript</span><span>Next.js</span></span>
+    </summary>
+    <div class="body">
+      <h3>What it does</h3>
+      <p>Patients book a place in the clinic queue in three steps (complaint, review, confirmation) and then follow their queue number, position and estimated wait time. Patients and clinic staff get real-time queue updates. The interface is in Indonesian.</p>
+      <h3>What I did</h3>
+      <p>I designed and implemented the notification feature, tested the application and fixed bugs.</p>
+      <h3>Screens</h3>
+      <div class="shots">
+        <figure><img alt="QCare booking review step showing complaint, time and date, with the patient's queue list below" src="assets/qcare-review.jpg"><figcaption>Booking review step, with the notification bell at top right</figcaption></figure>
+        <figure><img alt="QCare booking confirmation step with the chosen time and a Register Now button" src="assets/qcare-confirm.jpg"><figcaption>Confirming the booking</figcaption></figure>
+        <figure><img alt="QCare queue ticket showing queue number A002, people ahead, total queue, position and estimated wait of about 15 minutes" src="assets/qcare-ticket.jpg"><figcaption>Queue ticket with position and estimated wait</figcaption></figure>
+      </div>
+      <div class="links"><a href="https://github.com/Stanley3322?tab=repositories">GitHub</a></div>
+    </div>
+  </details>
+</section>
+
+<section id="publication">
+  <h2>Publication</h2>
+  <div class="pub-box">
+    <p><strong>Stanley Dirk Nente</strong>, Demetrius Howard Setiawan, Ivan Sebastian Edbert, Samson Ndruru. "Benchmarking the Gap Between Multimodal Generalized and Domain-Specific Models in Identifying Malaria from Blood Test Imagery." <em>2026 13th International Conference on ICT for Smart Society (ICISS)</em>, IEEE, 2026.</p>
+    <p style="color:var(--muted)">Presented at the conference in August 2026, Bandung, Indonesia.</p>
+    <a href="https://doi.org/10.1109/ICISS71466.2026.11715041">10.1109/ICISS71466.2026.11715041</a>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <dl>
+    <dt>Languages</dt><dd>Python, Java, C++, SQL, JavaScript</dd>
+    <dt>AI and data</dt><dd>PyTorch, TensorFlow, scikit-learn</dd>
+    <dt>Web and tools</dt><dd>Next.js, Laravel, HTML, n8n, Docker, VS Code</dd>
+    <dt>Studied</dt><dd>Machine learning, natural language processing, computer vision, algorithms, databases</dd>
+  </dl>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <div class="edu">
+    <strong>BINUS University, Alam Sutera Campus</strong>
+    <p>Bachelor of Computer Science, 2024 to expected 2028. GPA 3.50 / 4.00.</p>
+  </div>
+  <dl>
+    <dt>Programs</dt><dd>Excellence Program B2028 (Sep 2024 to Jun 2025); Laboratory assistant recruitment pre-training (Oct 2024)</dd>
+    <dt>Conferences</dt><dd>IFI Conference on Artificial Intelligence by Paris-Saclay University (Apr 2026)</dd>
+  </dl>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>I'm open to internships. The best way to reach me is email.</p>
+  <div class="btns">
+    <a class="btn primary" href="mailto:stanley.nente@binus.ac.id">stanley.nente@binus.ac.id</a>
+    <a class="btn ghost" href="https://www.linkedin.com/in/stanley-nente-5022bb326">LinkedIn</a>
+    <a class="btn ghost" href="https://github.com/Stanley3322">GitHub</a>
+  </div>
+</section>
+</div>
+</main>
+
+<footer><div class="wrap">Stanley Dirk Nente, Computer Science, BINUS University</div></footer>
+</body>
+</html>
